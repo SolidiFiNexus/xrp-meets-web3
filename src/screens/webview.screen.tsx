@@ -33,7 +33,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
 
   /**
    * The browser navigation header
-   * Includes refresh button, go back and forward buttons and a network switch
+   * Includes refresh button, go back and forward buttons
    */
   const updateHeader = () => {
     navigation.setOptions({
