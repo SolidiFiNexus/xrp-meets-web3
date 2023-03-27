@@ -44,7 +44,7 @@ export const HomeScreen = () => {
     <View style={styles.container}>
       <Text style={{marginBottom: 10, fontSize: 14}}>Welcome!</Text>
       <QRCode size={width * 0.5} logoMargin={3} logoSize={10} logoBackgroundColor={'white'}
-              logo={require('../assets/xrp-logo.png')} value={vars.xrpAddress}/>
+              logo={require('../assets/images/xrp-logo.png')} value={vars.xrpAddress}/>
       <Text style={{textAlign: 'center', marginTop: 20}}>{vars.xrpAddress}</Text>
       <Text style={{textAlign: 'center', marginTop: 20}}>{loading ? '...' : balance} XRP</Text>
       <StatusBar style="auto"/>

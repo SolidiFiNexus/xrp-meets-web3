@@ -10,6 +10,7 @@ import ProgressBarComponent from "../components/progress-bar.component";
 import {RouteNavigation} from "../types/app.types";
 import {DappBrowserState} from "../types/browser.types";
 import Ionicons from '@expo/vector-icons/Ionicons';
+import {web3Provider} from "../assets/scripts/provider";
 
 export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
   const [progressBarOpacity] = useState(new Animated.Value(0));
@@ -166,6 +167,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
         originWhitelist={["https://*", "http://*"]}
         decelerationRate={"normal"}
         injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+        injectedJavaScriptBeforeContentLoaded={web3Provider()}
         onLoadStart={onLoadStart}
         onNavigationStateChange={(e: WebViewNavigation) => {
           setBrowserState({
