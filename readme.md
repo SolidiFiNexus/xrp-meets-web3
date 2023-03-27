@@ -24,11 +24,11 @@ The core framework used for development React Native. This javascript-based fram
 one programming language for both iOS and Android. All screens are written in javascript and then “exported” to a native
 iOS and Android app. This allows for rapid development while also offering a native app experience to the end-user.
 
-Further more, SolidiFi’s web counter-part (SolidiFi Web, https://solidifi.app) is built in React. This allows code
+Furthermore, SolidiFi’s web counter-part (SolidiFi Web, https://solidifi.app) is built in React. This allows code
 sharing between the two projects. So writing functionality for SolidiFi Web, makes it easily portable to SolidiFi Wallet
 without much extra development time.
 
-### 1.2 App development frame work: Expo
+### 1.2 App development framework: Expo
 
 Expo is a framework that offers tools to easily build a React Native project and convert it to native iOS and Android
 applications. Expo is also used to submit builds directly to the app stores.
@@ -93,7 +93,7 @@ that developers can see on a dedicated website we'd like to build) interact with
 
 This supportive website is the go-to place to learn about web3 for XRP. It will have a demo application for developers
 to test their integration, and API documentation of the injected javascript.
-Furthermor it can host various showcases that app users can load as bookmarks within the mobile app.
+Furthermore, it can host various showcases that app users can load as bookmarks within the mobile app.
 
 The API documentation allows other developers to integrate xrp-meets-web3 into their mobile applications and therefor
 access the entire XRP dApp ecosystem as well.
