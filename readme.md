@@ -1,3 +1,8 @@
+This projects has 2 screens:
+
+1) Load the balance of an XRP account
+2) Load a webview and inject a basic web3 "XRP Provider" into it that websites can use to interact with it.
+
 # Technical description of xrp-meets-web3
 
 This document consists of two sections.
