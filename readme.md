@@ -42,7 +42,7 @@ the same style.
 
 Redux is used to manage the global state of the application. It allows for storage of data such as user preferences.
 Once the user re-opens the app, redux is used to load the previous state of the application as well as personal user
-settings. Initial application states are found in src/redux/states/*.state.ts at the initialState variable.
+settings.
 
 ### 1.5 Private keys management: Expo SecureStore
 
