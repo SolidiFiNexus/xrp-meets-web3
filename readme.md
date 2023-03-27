@@ -116,4 +116,4 @@ Below is an example workflow:
 
 1) yarn install
 2) yarn start
-3) i (to open ios emulator on MacOs or a to open the android emulator)
+3) i (to open ios emulator on MacOS or a to open the android emulator)
