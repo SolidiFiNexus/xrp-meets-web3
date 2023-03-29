@@ -185,7 +185,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
           if (!e.loading) {
             Alert.alert(
               "Successful",
-              "XRP provider successfully injected!.\n\nSee src/screens/webview.screen.tsx line 170.\n\nThis merely injects javascript, nothing is yet happening on this page, but you can imagine, your wallet balance being shown here and start making interactions with the XRPL.\n\nA website will be able to request the wallet address, request transactions etc.\n\nPretty cool!"
+              "XRP provider successfully injected!\n\nSee src/screens/webview.screen.tsx line 170.\n\nThis merely injects javascript, nothing is yet happening on this page, but you can imagine, your wallet balance being shown here and start making interactions with the XRPL.\n\nA website will be able to request the wallet address, request transactions etc.\n\nPretty cool!"
             );
           }
         }}

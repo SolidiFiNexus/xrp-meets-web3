@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8908d8f-12df-46e8-9289-c6b6d744c33d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/homescreen.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/webview.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/webview.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/webview.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/webview.screen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
       <updated>1679867151821</updated>
       <workItem from="1679867153129" duration="10043000" />
       <workItem from="1679997269148" duration="576000" />
-      <workItem from="1680064569450" duration="2377000" />
+      <workItem from="1680064569450" duration="2625000" />
     </task>
     <servers />
   </component>
