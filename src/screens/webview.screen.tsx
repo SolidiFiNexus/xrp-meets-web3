@@ -1,4 +1,4 @@
-import {Animated, StyleSheet, Text, View, Button, TouchableOpacity} from "react-native";
+import {Animated, StyleSheet, View, TouchableOpacity, Alert} from "react-native";
 import * as React from "react";
 import {WebView, WebViewNavigation} from "react-native-webview";
 import {useEffect, useRef, useState} from "react";
@@ -9,7 +9,7 @@ import {XrplClient} from "xrpl-client";
 import ProgressBarComponent from "../components/progress-bar.component";
 import {RouteNavigation} from "../types/app.types";
 import {DappBrowserState} from "../types/browser.types";
-import Ionicons from '@expo/vector-icons/Ionicons';
+import Ionicons from "@expo/vector-icons/Ionicons";
 import {web3Provider} from "../assets/scripts/provider";
 
 export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
@@ -19,7 +19,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
     enableBack: false,
     enableForward: false,
     title: "",
-    url: 'https://solidifi.app',
+    url: "https://solidifi.app",
     initialized: false,
   });
   const webviewRef = useRef<WebView | null>(null);
@@ -29,7 +29,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
 
   useEffect(() => {
     updateHeader();
-  }, [browserState])
+  }, [browserState]);
 
   /**
    * The browser navigation header
@@ -43,19 +43,23 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
           <TouchableOpacity
             disabled={!browserState.enableBack}
             style={{marginRight: 10, opacity: browserState.enableBack ? 1 : 0.4}}
-            onPress={() => webviewRef.current?.goBack()} activeOpacity={0.7}>
-            <Ionicons name={"arrow-back-outline"} size={20} color={'#333'}/>
+            onPress={() => webviewRef.current?.goBack()}
+            activeOpacity={0.7}
+          >
+            <Ionicons name={"arrow-back-outline"} size={20} color={"#333"}/>
           </TouchableOpacity>
 
           <TouchableOpacity
             disabled={!browserState.enableForward}
             style={{marginRight: 10, opacity: browserState.enableForward ? 1 : 0.4}}
-            onPress={() => webviewRef.current?.goForward()} activeOpacity={0.7}>
-            <Ionicons name={"arrow-forward-outline"} size={20} color={'#333'}/>
+            onPress={() => webviewRef.current?.goForward()}
+            activeOpacity={0.7}
+          >
+            <Ionicons name={"arrow-forward-outline"} size={20} color={"#333"}/>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => webviewRef.current?.reload()} activeOpacity={0.7}>
-            <Ionicons name={"reload"} size={20} color={'#333'}/>
+            <Ionicons name={"reload"} size={20} color={"#333"}/>
           </TouchableOpacity>
         </View>
       ),
@@ -105,7 +109,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
     } catch (e) {
     }
     return 0;
-  }
+  };
 
   /**
    * Get the latest ledger index
@@ -114,7 +118,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
     const ledgerData = await client.current.send({
       id: 14,
       command: "ledger",
-      ledger_index: 'validated',
+      ledger_index: "validated",
       full: false,
       accounts: false,
       transactions: false,
@@ -122,7 +126,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
       owner_funds: false,
     });
     return ledgerData.ledger.ledger_index;
-  }
+  };
 
   /**
    * Handle XRPL-based messages from a website
@@ -157,7 +161,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
           break;
       }
     }
-  }
+  };
 
   return (
     <View style={{flex: 1}}>
@@ -177,6 +181,13 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
             url: e.url.toString(),
             initialized: true,
           });
+
+          if (!e.loading) {
+            Alert.alert(
+              "Successful",
+              "XRP provider successfully injected!.\n\nSee src/screens/webview.screen.tsx line 170.\n\nThis merely injects javascript, nothing is yet happening on this page, but you can imagine, your wallet balance being shown here and start making interactions with the XRPL.\n\nA website will be able to request the wallet address, request transactions etc.\n\nPretty cool!"
+            );
+          }
         }}
         onLoadEnd={onLoadEnd}
         onLoadProgress={onLoadProgress}
@@ -185,13 +196,13 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
         domStorageEnabled={true}
         startInLoadingState={true}
         allowsInlineMediaPlayback={true}
-        source={{uri: 'https://solidifi.app/'}}
+        source={{uri: "https://solidifi.app/"}}
         testID={"xrp-meets-web3"}
         applicationNameForUserAgent={"WebView SolidiFiMobileApp"}
       />
     </View>
-  )
-}
+  );
+};
 
 const getStyles = () => {
   return StyleSheet.create({
@@ -201,6 +212,6 @@ const getStyles = () => {
       justifyContent: "space-between",
       marginRight: 20,
       paddingLeft: 15,
-    }
+    },
   });
 };

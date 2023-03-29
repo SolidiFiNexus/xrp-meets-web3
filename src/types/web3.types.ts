@@ -1,7 +1,4 @@
-type Methods =
-  | "get_balance"
-  | "ledger_index"
-  | "request_accounts";
+type Methods = "get_balance" | "ledger_index" | "request_accounts";
 
 export interface ProviderMessage {
   type: "api-request" | "web3-send-async-read-only";
