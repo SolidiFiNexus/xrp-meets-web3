@@ -3,8 +3,8 @@ This projects has 2 screens:
 1) Load the balance of an XRP account
 2) Load a webview and inject a basic web3 "XRP Provider" into it that websites can use to interact with it.
 
-![alt text](/assets/homescreen.jpg)
-![alt text](/assets/webview.jpg)
+<img src="/assets/homescreen.jpg" width="128"/>
+<img src="/assets/webview.jpg" width="128"/>
 
 # Technical description of xrp-meets-web3
 
