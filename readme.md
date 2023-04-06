@@ -123,7 +123,7 @@ Below is an example workflow:
 
 
 ## EXTRA:
-XRPL Labs has released a xApp to the web at 6th April 2023 (https://unhosted.exchange/). This transition is precisely what we are expecting to see :)
+XRPL Labs has released a xApp to the web on the 6th of April 2023 (https://unhosted.exchange/). This transition is precisely what we are expecting to see :)
 
 There is no connection standard, and therefor we can't use it the way it should be used: a native integration should be possible in any mobile application with an easy to use API to communicate. So a great move, but we can't use it. With XRP-meets-Web3 we would like to provide this to the developers space. Probably right on time before a whole ecosystem of dApps emerges on the web, it's best to have an easy to implement javascript module that any developer can use to make their dApp available to the world! 
 
