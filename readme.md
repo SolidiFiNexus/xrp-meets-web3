@@ -120,3 +120,11 @@ Below is an example workflow:
 1) yarn install
 2) yarn start
 3) i (to open ios emulator on MacOS or a to open the android emulator)
+
+
+## EXTRA:
+XRPL Labs has released a xApp to the web on the 6th of April 2023 (https://unhosted.exchange/). This transition is precisely what we are expecting to see :)
+
+A great dApp for XUMM, but unfortunately we can't use it dispite being it very useful to our users. There is no connection standard yet, and therefor we can't use it the way we think it should be used: a native integration should be possible in any mobile application with an easy to use API to communicate. With XRP-meets-Web3 we would like to provide this to the XRPL developers space. Probably right on time before a whole ecosystem of dApps emerges on the web, we would like to develop a well documented javascript module that any developer can use to make their dApp available to the world! 
+
+
