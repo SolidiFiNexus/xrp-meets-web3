@@ -11,7 +11,7 @@ to our users. There is no connection standard yet.
 How great would it any mobile application would have access to such dApps? Could there be something as simple as
 connecting your non-custodial mobile wallet to any dApp with a press on a button?
 
-You got it :) With XRP-meets-web3 we would like to make this happen. What is a standard in the EVM-world has yet to be
+Absolutely :) With XRP-meets-web3 we would like to make this happen. What is a standard in the EVM-world has yet to be
 created for the XRPL. With this project we would like to offer developers a simple tool that they can integrate within
 their online dApps so that mobile applications can interact with them in a safe and secure manner.
 
