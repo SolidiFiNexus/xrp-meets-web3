@@ -149,6 +149,8 @@ This is the important part, where a javascript file is injected into a website t
 injected to allow for (secure) communication with the mobile application itself. This file can (through a documented API
 that developers can see on a dedicated website we'd like to build) interact with the user interface on the website.
 
+A simple example of this file can be found at `src/assets/scripts`
+
 ### 2.3 A dedicated website to introduce this technology and have a place to showcase XRP dApps
 
 This supportive website is the go-to place to learn about web3 for XRP. It will have a demo application for developers
@@ -177,3 +179,25 @@ Below is an example workflow:
 1) yarn install
 2) yarn start
 3) i (to open ios emulator on MacOS or a to open the android emulator)
+
+# Next steps
+
+We have seen a simple interaction with the XRP web3 provider. But now support has to be made for most, if not all of the
+XRPL functionality. Think of creating trust lines, placing DEX orders, manage NFTs and more. The javascript web3
+provider should also contain data encryption methods to prevent malicious users from intercepting data as well as error
+handling in a way that is standardized.
+
+Furthermore, a clear API documentation will be made available so that other developers can implement this technology as
+well.
+
+This would give truly unlimited possibilities to XRP on web3 and we are ready to make this happen.
+
+Part of the grant application we optionally requested funding for setting up an XRPL validator. We would be privileged
+to run an XRPL validator and set up the necessary infrastructure so that it can be used for not only our own
+applications but also for other developers.
+
+We appreciate you have taken the time to go through our project and are looking forward to your feedback!
+
+
+
+
