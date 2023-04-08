@@ -1,25 +1,82 @@
+# Introduction
+
+In recent years more and more apps are being created on top of the XRP Ledger. They offer great features that go
+beyond sending and receiving XRP. Think of Bithomp, onXRP, xrptoolkit and many more.
+
+XRPL Labs recently released a xApp to the web on the 6th of April 2023 (https://unhosted.exchange/). This transition to
+dApps is what we are expecting to see, as otherwise apps would be isolated and not accessible to everyone.
+The DEX developed by XRPL Labs is a great dApp for XUMM, but unfortunately we can't use it dispite being it very useful
+to our users. There is no connection standard yet.
+
+How great would it any mobile application would have access to such dApps? Could there be something as simple as
+connecting your non-custodial mobile wallet to any dApp with a press on a button?
+
+You got it :) With XRP-meets-web3 we would like to make this happen. What is a standard in the EVM-world has yet to be
+created for the XRPL. With this project we would like to offer developers a simple tool that they can integrate within
+their online dApps so that mobile applications can interact with them in a safe and secure manner.
+
+# What does this repo contain?
+
+This repository contains a React Native mobile application with a simple webview that connects to a dApp. In this case
+we are connecting to a live example that we have developed at https://solidifi.app/grant-application.
+Apart from the mobile application we have included the source code of this dApp as well. This can be found in the
+client/ folder.
+
+Below follows the overview of the React Native application.
+
+# Overview
+
 This projects has 2 screens:
 
 1) Load the balance of an XRP account
 2) Load a webview and inject a basic web3 "XRP Provider" into it that websites can use to interact with it.
 
-<img src="/assets/homescreen.jpg" width="300"/>
-<img src="/assets/webview.jpg" width="300"/>
+- once the webview is loaded, a user clicks the connect button
+- a popup asks for confirmation to allow website to read wallet address
+- the address is returned from the mobile application
+- website is now able to access the wallet address!
+
+Here is a visual representation of the app
+
+### Home - basic example of a random XRP address
+
+<img src="/assets/explainers/home.jpg" width="300"/>
+
+### Injection - Mobile app injects the javascript based XRP provider
+
+<img src="/assets/explainers/injected.jpg" width="300"/>
+
+### Start - The user can start interact with the dApp by pressing the connect button
+
+<img src="/assets/explainers/start.jpg" width="300"/>
+
+### Confirmation - The mobile app checks if the user approves the connection
+
+<img src="/assets/explainers/confirm-connect.jpg" width="300"/>
+
+### Connected! - In this simple example the wallet  address is read from the mobile app.
+
+<img src="/assets/explainers/connected.jpg" width="300"/>
+
+
+Below is a technical description of the project.
 
 # Technical description of xrp-meets-web3
 
-This document consists of two sections.
+This document contains 2 technical descriptions.
 
-1) Section 1 is the technical description of the current technical status of the mobile app.
+1) Section 1 is the technical description of the current technical status of the SolidiFi Wallet in which we would like
+   to integrate the web3 provider and present it to the world.
 2) Section 2 is the technical description of xrp-meets-web3
 
-Keep in mind that the proposed technology will be demoed within our app, but can also be integrated into other mobile
-apps.
+As stated in our application, we would like to open source this technology, properly document it so that any developer
+can use it.
+
+This way we hope to open up many many many possibilities for the XRPL. We personally can't wait to ask Bithomp, XRPL
+Labs, onXRP and others to add support for this technology so that even more users can make use of the great work these
+developers have done.
 
 ## 1. Current technical overview
-
-The crypto world moves fast. In order to keep up with the pace, a flexible architecture is needed that allows for rapid
-development.
 
 ### 1.1 Programming language framework: React Native
 
@@ -120,11 +177,3 @@ Below is an example workflow:
 1) yarn install
 2) yarn start
 3) i (to open ios emulator on MacOS or a to open the android emulator)
-
-
-## EXTRA:
-XRPL Labs has released a xApp to the web on the 6th of April 2023 (https://unhosted.exchange/). This transition is precisely what we are expecting to see :)
-
-A great dApp for XUMM, but unfortunately we can't use it dispite being it very useful to our users. There is no connection standard yet, and therefor we can't use it the way we think it should be used: a native integration should be possible in any mobile application with an easy to use API to communicate. With XRP-meets-Web3 we would like to provide this to the XRPL developers space. Probably right on time before a whole ecosystem of dApps emerges on the web, we would like to develop a well documented javascript module that any developer can use to make their dApp available to the world! 
-
-
