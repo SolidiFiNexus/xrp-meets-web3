@@ -15,7 +15,8 @@ export interface ProviderMessage {
 
 export interface JSONRPCResponse {
   messageId: number;
-  type: "web3-send-async-callback";
+  type: "web3-send-async-callback" | "api-response";
+  permission?: string;
   result: { id: number; jsonrpc: "2.0"; result?: string | string[] | null | any };
   error?: { code: any };
 }

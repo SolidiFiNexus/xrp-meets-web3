@@ -140,25 +140,49 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
       result: {id: data.messageId, jsonrpc: "2.0", result: null},
     };
 
-    if (data.payload) {
-      // SECURITY NOTE: strictly allow only hardcoded methods so we have full control
-      // over the responses. everything else will be ignored
-      switch (data.payload.method) {
-        case "ledger_index":
-          response.result.result = getLedgerIndex();
-          const ledgerIndexResponse = JSON.stringify(response);
-          webviewRef.current?.postMessage(ledgerIndexResponse);
-          break;
-        case "get_balance":
-          response.result.result = getBalance();
-          const balanceResponse = JSON.stringify(response);
-          webviewRef.current?.postMessage(balanceResponse);
-          break;
-        case "request_accounts":
-          response.result.result = [vars.xrpAddress];
-          const accountsResponse = JSON.stringify(response);
-          webviewRef.current?.postMessage(accountsResponse);
-          break;
+    if (data.type === "api-request" && data.permission === "web3") {
+      Alert.alert(
+        "Allow website to read wallet?",
+        "Do you want to allow this website to read your wallet?",
+        [
+          {text: "No"},
+          {
+            text: "Yes",
+            onPress: () => {
+              response = {
+                ...response,
+                type: "api-response",
+                permission: "web3",
+              };
+
+              response.result.result = {address: [vars.xrpAddress]};
+              const permissionResponse = JSON.stringify(response);
+              webviewRef.current?.postMessage(permissionResponse);
+            },
+          },
+        ]
+      );
+    } else {
+      if (data.payload) {
+        // SECURITY NOTE: strictly allow only hardcoded methods so we have full control
+        // over the responses. everything else will be ignored
+        switch (data.payload.method) {
+          case "ledger_index":
+            response.result.result = getLedgerIndex();
+            const ledgerIndexResponse = JSON.stringify(response);
+            webviewRef.current?.postMessage(ledgerIndexResponse);
+            break;
+          case "get_balance":
+            response.result.result = getBalance();
+            const balanceResponse = JSON.stringify(response);
+            webviewRef.current?.postMessage(balanceResponse);
+            break;
+          case "request_accounts":
+            response.result.result = [vars.xrpAddress];
+            const accountsResponse = JSON.stringify(response);
+            webviewRef.current?.postMessage(accountsResponse);
+            break;
+        }
       }
     }
   };
@@ -185,7 +209,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
           if (!e.loading) {
             Alert.alert(
               "Successful",
-              "XRP provider successfully injected!\n\nSee src/screens/webview.screen.tsx line 170.\n\nThis merely injects javascript, nothing is yet happening on this page, but you can imagine, your wallet balance being shown here and start making interactions with the XRPL.\n\nA website will be able to request the wallet address, request transactions etc.\n\nPretty cool!"
+              "XRP provider successfully injected!\n\nSee src/screens/webview.screen.tsx line 197.\n\nThis merely injects javascript, nothing is yet happening on this page, but you can imagine, your wallet balance being shown here and start making interactions with the XRPL.\n\nA website will be able to request the wallet address, request transactions etc.\n\nPretty cool!"
             );
           }
         }}
@@ -196,7 +220,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
         domStorageEnabled={true}
         startInLoadingState={true}
         allowsInlineMediaPlayback={true}
-        source={{uri: "https://solidifi.app/"}}
+        source={{uri: "https://solidifi.app/grant-application"}}
         testID={"xrp-meets-web3"}
         applicationNameForUserAgent={"WebView SolidiFiMobileApp"}
       />

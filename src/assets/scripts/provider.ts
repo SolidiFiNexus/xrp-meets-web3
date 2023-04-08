@@ -26,17 +26,18 @@ export const web3Provider = () => {
         callbacks[messageId] = params;
       });
     }
-
+    
     window.addEventListener("message", async function (event) {
       var data = JSON.parse(event.data);
       var id = data.messageId;
       var callback = callbacks[id];
-
+      
       if (data.type === "api-response") {
         if (data.permission == "web3") {
-          var selectedAddress = data.data[0];
+          var selectedAddress = data.result.result.address[0];
+                    
           window.xrp.selectedAddress = selectedAddress;
-          window.xrp.emit("accountsChanged", data.data);
+          window.xrp.emit("accountsChanged", data.result.result.address);
         }
 
         if (callback) {
@@ -54,6 +55,7 @@ export const web3Provider = () => {
     ////////////////////////////////////////////////////////////////////
     var XRPProvider = function () {};
 
+    XRPProvider.prototype._events = {};
     XRPProvider.prototype.isSolidiFi = true; // allows UI detection for SolidiFi
     XRPProvider.prototype.isConnected = function () {
       return true;
@@ -62,42 +64,27 @@ export const web3Provider = () => {
     XRPProvider.prototype.enable = function () {
       return sendAPIrequest("web3");
     };
-
-    XRPProvider.prototype.request = function (requestArguments) {
-      if (!requestArguments) {
-        return Promise.reject(new Error("Request is not valid."));
+    
+    XRPProvider.prototype.on = function (name, listener) {
+      if (!this._events[name]) {
+        this._events[name] = [];
       }
-      var method = requestArguments.method;
-      if (!method) {
-        return Promise.reject(new Error("Request is not valid."));
+      this._events[name].push(listener);
+    };
+    
+    XRPProvider.prototype.emit = function (name, data) {
+      if (!this._events[name]) {
+        return;
       }
-
-      var messageId = callbackId++;
-  
-      if (messageId == 0) {
-        return sendAPIrequest("web3");
-      }
-
-      var payload = {
-        id: messageId,
-        jsonrpc: "2.0",
-        method: method,
-        params: requestArguments.params,
-      };
-
-      bridgeSend({
-        type: "web3-send-async-read-only",
-        messageId: messageId,
-        payload: payload,
-      });
-
-      return new Promise(function (resolve, reject) {
-        callbacks[messageId] = {
-          beta: true,
-          method: method,
-          resolve: resolve,
-          reject: reject,
-        };
+      
+      this._events[name].forEach((cb) => {
+       try {
+          cb(data);
+        } catch (e) {
+          setTimeout(() => {
+            throw e;
+          });
+        }
       });
     };
   }
