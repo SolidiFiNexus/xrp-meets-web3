@@ -8,7 +8,7 @@ dApps is what we are expecting to see, as otherwise apps would be isolated and n
 The DEX developed by XRPL Labs is a great dApp for XUMM, but unfortunately we can't use it dispite being it very useful
 to our users. There is no connection standard yet.
 
-How great would it any mobile application would have access to such dApps? Could there be something as simple as
+How great would it be if any mobile application would have access to such dApps? Could there be something as simple as
 connecting your non-custodial mobile wallet to any dApp with a press on a button?
 
 Absolutely :) With XRP-meets-web3 we would like to make this happen. What is a standard in the EVM-world has yet to be
