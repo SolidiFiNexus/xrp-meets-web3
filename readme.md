@@ -42,19 +42,19 @@ Here is a visual representation of the app
 
 <img src="/assets/explainers/home.jpg" width="300"/>
 
-### Injection - Mobile app injects the javascript based XRP provider
+### WebView Injection - Mobile app injects the javascript-based XRP provider
 
 <img src="/assets/explainers/injected.jpg" width="300"/>
 
-### Start - The user can start interact with the dApp by pressing the connect button
+### WebView Start - The user can start interact with the dApp by pressing the connect button
 
 <img src="/assets/explainers/start.jpg" width="300"/>
 
-### Confirmation - The mobile app checks if the user approves the connection
+### WebView Confirmation - The mobile app checks if the user approves the connection
 
 <img src="/assets/explainers/confirm-connect.jpg" width="300"/>
 
-### Connected! - In this simple example the wallet  address is read from the mobile app.
+### WebView Connected! - In this simple example the wallet address is read from the mobile app.
 
 <img src="/assets/explainers/connected.jpg" width="300"/>
 
