@@ -57,7 +57,7 @@ function ExamplePage() {
 
                   <h3>Welcome</h3>
 
-                  <p style={{marginTop: 20}}>Let's connect to your wallet and check our balance!</p>
+                  <p style={{marginTop: 20}}>Let's connect to your wallet and check out its balance!</p>
 
                   <Button disabled={address !== null} onClick={() => connect()} type={"primary"}>
                     {address ? "CONNECTED" : "CONNECT"}
