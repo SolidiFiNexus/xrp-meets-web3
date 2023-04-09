@@ -7,6 +7,11 @@ import {useWindowDimensions} from "react-native";
 import {XrplClient} from "xrpl-client";
 import {useEffect, useRef, useState} from "react";
 
+/**
+ * Home screen
+ *
+ * @constructor
+ */
 export const HomeScreen = () => {
   const {width} = useWindowDimensions();
   const [balance, setBalance] = useState(0);
@@ -15,6 +20,9 @@ export const HomeScreen = () => {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
+  /**
+   * Get the latest USD rate of XRP from CoinGecko
+   */
   const getRate = () => {
     fetch("https://api.coingecko.com/api/v3/simple/price?ids=ripple&vs_currencies=usd")
       .then((x) => x.json())
@@ -27,6 +35,9 @@ export const HomeScreen = () => {
       });
   };
 
+  /**
+   * Get the balance of an XRP account
+   */
   const getBalance = async () => {
     try {
       const accountInfo: any = await client.current?.send({
@@ -46,16 +57,24 @@ export const HomeScreen = () => {
     setLoading(false);
   };
 
+  /**
+   * Method triggered when refreshing the page (swiping down)
+   */
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
     getBalance();
     getRate();
   }, []);
 
+  /**
+   * On ready method
+   */
   useEffect(() => {
     getBalance();
     getRate();
+
     return () => {
+      // close the websocket connection of the XRPL client
       client.current.close();
     };
   }, []);

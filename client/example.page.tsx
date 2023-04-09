@@ -7,12 +7,16 @@ const {Content} = Layout;
 
 /**
  * Page for connecting a wallet through a mobile application
+ * This page is currently hosted at: https://solidifi.app/grant-application
  *
  * @constructor
  */
 function ExamplePage() {
   const [address, setAddress] = useState<string | null>(null);
 
+  /**
+   * On ready method for this page
+   */
   useEffect(() => {
     // scroll to the top of the page when it's loaded
     window.scrollTo(0, 0);
@@ -20,6 +24,9 @@ function ExamplePage() {
 
   /**
    * Connect to the XRP web3 provider
+   *
+   * 1. call enable() on the web3 provider to request permission to access a user's wallet
+   * 2. listen to the "accountsChanged" event and update the received address in the UI of this page.
    */
   const connect = async () => {
     // @ts-ignore

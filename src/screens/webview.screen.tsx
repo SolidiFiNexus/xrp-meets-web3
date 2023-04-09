@@ -12,6 +12,13 @@ import {DappBrowserState} from "../types/browser.types";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {web3Provider} from "../assets/scripts/provider";
 
+/**
+ * WebView screen with injected XRP web3 provider
+ *
+ * @param navigation
+ * @param route
+ * @constructor
+ */
 export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
   const [progressBarOpacity] = useState(new Animated.Value(0));
   const [progress, setProgress] = useState(0);
@@ -27,8 +34,16 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
 
   const styles = getStyles();
 
+  /**
+   * On ready method
+   */
   useEffect(() => {
     updateHeader();
+
+    return () => {
+      // close the websocket connection of the XRPL client
+      client.current.close();
+    };
   }, [browserState]);
 
   /**
@@ -163,6 +178,9 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
         ]
       );
     } else {
+      // the following is for demo purposes and not functional within this mobile app.
+      // it illustrates the responds a mobile application can make to specificic requests
+      // coming from the XRP web3 provider
       if (data.payload) {
         // SECURITY NOTE: strictly allow only hardcoded methods so we have full control
         // over the responses. everything else will be ignored

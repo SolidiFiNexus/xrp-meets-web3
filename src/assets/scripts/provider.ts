@@ -27,6 +27,7 @@ export const web3Provider = () => {
       });
     }
     
+    // Receive messages from React Native's WebView
     window.addEventListener("message", async function (event) {
       var data = JSON.parse(event.data);
       var id = data.messageId;

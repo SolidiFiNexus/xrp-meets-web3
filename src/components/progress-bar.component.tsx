@@ -2,6 +2,14 @@ import {Animated, Dimensions} from "react-native";
 import React from "react";
 import Value = Animated.Value;
 
+/**
+ * Progress bar for the WebView.
+ * Becomes visible when loading a website and fades out when loading is done
+ *
+ * @param progressBarOpacity
+ * @param progress
+ * @constructor
+ */
 const ProgressBarComponent = ({
                                 progressBarOpacity,
                                 progress,
