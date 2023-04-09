@@ -227,7 +227,7 @@ export const WebViewScreen = ({navigation, route}: RouteNavigation) => {
           if (!e.loading) {
             Alert.alert(
               "Successful",
-              "XRP provider successfully injected!\n\nSee src/screens/webview.screen.tsx line 197.\n\nThis merely injects javascript, nothing is yet happening on this page, but you can imagine, your wallet balance being shown here and start making interactions with the XRPL.\n\nA website will be able to request the wallet address, request transactions etc.\n\nPretty cool!"
+              "XRP provider successfully injected!\n\nSee src/screens/webview.screen.tsx line 216.\n\nSince the XRP web3 provider is now injected, the dApp on this page is now ready to interact with the wallet within the mobile app.\n\nA mobile app user can sign transactions, place DEX orders, purchase NFTs and do all other things the XRPL has to offer.\n\nAny mobile app can make use of this, opening up the entire web3 ecosystem to its users.\n\nPretty cool!"
             );
           }
         }}
