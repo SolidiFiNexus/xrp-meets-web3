@@ -18,9 +18,9 @@ their online dApps so that mobile applications can interact with these projects 
 # What does this repo contain?
 
 This repository contains a React Native mobile application with a simple webview that connects to a dApp. In this case
-we are connecting to a live example that we have developed at https://solidifi.app/grant-application.
+we are connecting to a live example that we have deployed at https://solidifi.app/grant-application.
 Apart from the mobile application we have included the source code of this dApp as well. This can be found in the
-client/ folder.
+```client/``` folder.
 
 Below follows the overview of the React Native application.
 
