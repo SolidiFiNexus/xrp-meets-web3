@@ -11,7 +11,7 @@ to our users. There is no connection standard yet.
 How great would it be if any mobile application would have access to such dApps? Could there be something as simple as
 connecting your non-custodial mobile wallet to any dApp with a press on a button?
 
-Absolutely :) With XRP-meets-web3 we would like to make this happen. What is a standard in the EVM-world has yet to be
+Absolutely :) With XRP-meets-web3 we would like to make this happen. What has become a standard in the EVM-world has yet to be
 created for the XRPL. With this project we would like to offer developers a simple tool that they can integrate within
 their online dApps so that mobile applications can interact with these projects in a safe and secure manner.
 
@@ -58,6 +58,7 @@ Here is a visual representation of the app
 
 <img src="/assets/explainers/connected.jpg" width="300"/>
 
+Aweseome! You have now witnessed the world's first native web3 connection to the XRPL for a mobile application. Everything is happening in one application: loading a webpage, loading the web3 provider, loading the wallet data and bridging this data with a dApp. And all of it is happening without navigating away from the mobile application itself. We believe this is a powerfool tool that can push adoption of XRP within the web3 DeFi space. 
 
 Below is a technical description of the project.
 
