@@ -176,11 +176,9 @@ Below is an example workflow:
 
 # Next steps
 
-We have demonstrated a simple interaction with the XRP web3 provider, but there is much more to achieve. Our next steps include expanding support to cover the full range of XRPL functionalities, such as creating trust lines, placing DEX orders, managing NFTs, and more. The JavaScript web3 provider will also incorporate robust data encryption methods to prevent malicious users from intercepting data and standardized error handling to ensure reliability and security.
+We have demonstrated a simple interaction with the XRP web3 provider, but there is much more to achieve. Our next steps include expanding support to cover the full range of XRPL functionalities, such as creating trust lines, placing DEX orders, managing NFTs, AMM and more. The JavaScript web3 provider will also incorporate robust data encryption methods to prevent malicious users from intercepting data and standardized error handling to ensure reliability and security.
 
 In addition, we will provide comprehensive API documentation, enabling other developers to easily implement this technology in their own projects. This initiative will unlock countless possibilities for integrating XRP into the web3 ecosystem, and we are excited to make this vision a reality.
-
-As part of our grant application, we have also requested optional funding to set up an XRPL validator. Operating an XRPL validator would allow us to support not only our own applications but also provide valuable infrastructure for other developers in the community.
 
 We appreciate your time and consideration of our project and look forward to your feedback.
 
