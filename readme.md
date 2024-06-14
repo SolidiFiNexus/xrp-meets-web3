@@ -176,21 +176,13 @@ Below is an example workflow:
 
 # Next steps
 
-We have seen a simple interaction with the XRP web3 provider. But now support has to be made for most, if not all of the
-XRPL functionality. Think of creating trust lines, placing DEX orders, manage NFTs and more. The javascript web3
-provider should also contain data encryption methods to prevent malicious users from intercepting data as well as error
-handling in a way that is standardized.
+We have demonstrated a simple interaction with the XRP web3 provider, but there is much more to achieve. Our next steps include expanding support to cover the full range of XRPL functionalities, such as creating trust lines, placing DEX orders, managing NFTs, and more. The JavaScript web3 provider will also incorporate robust data encryption methods to prevent malicious users from intercepting data and standardized error handling to ensure reliability and security.
 
-Furthermore, a clear API documentation will be made available so that other developers can implement this technology as
-well.
+In addition, we will provide comprehensive API documentation, enabling other developers to easily implement this technology in their own projects. This initiative will unlock countless possibilities for integrating XRP into the web3 ecosystem, and we are excited to make this vision a reality.
 
-This would give truly unlimited possibilities to XRP on web3 and we are ready to make this happen.
+As part of our grant application, we have also requested optional funding to set up an XRPL validator. Operating an XRPL validator would allow us to support not only our own applications but also provide valuable infrastructure for other developers in the community.
 
-Part of the grant application we optionally requested funding for setting up an XRPL validator. We would be privileged
-to run an XRPL validator and set up the necessary infrastructure so that it can be used for not only our own
-applications but also for other developers.
-
-We appreciate you have taken the time to go through our project and are looking forward to your feedback!
+We appreciate your time and consideration of our project and look forward to your feedback.
 
 
 
