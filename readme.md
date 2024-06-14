@@ -1,19 +1,12 @@
 # Introduction
 
-In recent years more and more apps are being created on top of the XRP Ledger. They offer great features that go
-beyond sending and receiving XRP. Think of Bithomp, onXRP, xrptoolkit and many more.
+In recent years, the XRP Ledger has seen a surge in applications that offer features beyond basic XRP transactions. Notable examples include Bithomp, onXRP, and xrptoolkit. These applications demonstrate the expanding potential of the XRP Ledger ecosystem.
 
-XRPL Labs recently released a xApp to the web on the 6th of April 2023 (https://unhosted.exchange/). This transition to
-dApps is what we are expecting to see, as otherwise apps would be isolated and not accessible to everyone.
-The DEX developed by XRPL Labs is a great dApp for XUMM, but unfortunately we can't use it dispite being it very useful
-to our users. There is no connection standard yet.
+On April 6, 2023, XRPL Labs released a web app (https://unhosted.exchange/), highlighting the shift towards decentralized applications (dApps). This transition is crucial for ensuring that applications are interconnected and accessible to all users, rather than being isolated. Despite the usefulness of the DEX developed by XRPL Labs for XUMM, its full potential remains untapped due to the absence of a standard connection method.
 
-How great would it be if any mobile application would have access to such dApps? Could there be something as simple as
-connecting your non-custodial mobile wallet to any dApp with a press on a button?
+Imagine if any mobile application could seamlessly access such dApps. What if connecting your non-custodial mobile wallet to any dApp was as simple as pressing a button?
 
-Absolutely :) With XRP-meets-web3 we would like to make this happen. What has become a standard in the EVM-world has yet to be
-created for the XRPL. With this project we would like to offer developers a simple tool that they can integrate within
-their online dApps so that mobile applications can interact with these projects in a safe and secure manner.
+With XRP-meets-web3, we aim to turn this vision into reality. What has become standard practice in the Ethereum Virtual Machine (EVM) world has yet to be realized for the XRP Ledger. This project will provide developers with a straightforward tool to integrate their online dApps, enabling secure and seamless interactions with mobile applications.
 
 # What does this repo contain?
 
