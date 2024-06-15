@@ -10,12 +10,11 @@ With XRP-meets-web3, we aim to turn this vision into reality. What has become st
 
 # What does this repo contain?
 
-This repository contains a React Native mobile application with a simple webview that connects to a dApp. In this case
-we are connecting to a live example that we have deployed at https://solidifi.app/grant-application.
-Apart from the mobile application we have included the source code of this dApp as well. This can be found in the
-```client/``` folder.
+This repository contains two main components:
 
-Below follows the overview of the React Native application.
+- XRP-meets-Web3 Provider: A web3 provider that allows seamless communication between dApps and mobile applications with XRP wallets. 
+
+- React Native Demonstration Project: An example mobile application built with React Native to demonstrate the capabilities of the XRP-meets-Web3 provider. This project includes a webview that connects to a live example dApp deployed at https://solidifi.app/grant-application. The source code for this dApp can be found in the ```client/``` folder.
 
 # Overview
 
