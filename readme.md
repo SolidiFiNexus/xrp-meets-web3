@@ -12,7 +12,7 @@ With XRP-meets-web3, we aim to turn this vision into reality. What has become st
 
 This repository contains two main components:
 
-- XRP-meets-Web3 Provider: A web3 provider that allows seamless communication between dApps and mobile applications with XRP wallets. 
+- XRP-meets-Web3 Provider: A web3 provider that allows seamless communication between dApps and mobile applications with XRP wallets. The injected provider can be found at: https://github.com/SolidiFiNexus/xrp-meets-web3/blob/master/src/assets/scripts/provider.ts.
 
 - React Native Demonstration Project: An example mobile application built with React Native to demonstrate the capabilities of the XRP-meets-Web3 provider. This project includes a webview that connects to a live example dApp deployed at https://solidifi.app/grant-application. The source code for this dApp can be found in the ```client/``` folder.
 
