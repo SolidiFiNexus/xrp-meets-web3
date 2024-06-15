@@ -2,11 +2,13 @@
 
 In recent years, the XRP Ledger has seen a surge in applications that offer features beyond basic XRP transactions. Notable examples include Bithomp, onXRP, and xrptoolkit. These applications demonstrate the expanding potential of the XRP Ledger ecosystem.
 
-On April 6, 2023, XRPL Labs released a web app (https://unhosted.exchange/), highlighting the shift towards decentralized applications (dApps). This transition is crucial for ensuring that applications are interconnected and accessible to all users, rather than being isolated. Despite the usefulness of the DEX developed by XRPL Labs for XUMM, its full potential remains untapped due to the absence of a standard connection method.
+In 2023, XRPL Labs released a web app (https://unhosted.exchange/), highlighting the shift towards decentralized applications (dApps). This transition is crucial for ensuring that applications are interconnected and accessible to all users, rather than being isolated. Despite the usefulness of the DEX developed by XRPL Labs for XUMM, its full potential remains untapped due to the absence of a standard connection method.
 
-Imagine if any mobile application could seamlessly access such dApps. What if connecting your non-custodial mobile wallet to any dApp was as simple as pressing a button?
+At SolidiFi Nexus, we have also built our own DEX interface and it can be found at: https://solidifi.app/dex. 
 
-With XRP-meets-web3, we aim to turn this vision into reality. What has become standard practice in the Ethereum Virtual Machine (EVM) world has yet to be realized for the XRP Ledger. This project will provide developers with a straightforward tool to integrate their online dApps, enabling secure and seamless interactions with mobile applications.
+Imagine if any mobile application could seamlessly access such dApps. Mobile applications offer a high security when it comes to storing private keys. What if XRPL users want to use those mobile applications (such as Xaman and SolidiFi Wallet) and choose their favorite platform to interact with? What if connecting your non-custodial mobile wallet to any dApp was as simple as pressing a button?
+
+With XRP-meets-web3, we aim to turn this vision into reality. What has become standard practice in the Ethereum Virtual Machine (EVM) world has yet to be realized for the XRP Ledger. This project will provide developers with a straightforward tool to integrate their online dApps, enabling secure and seamless interactions with self-custodial wallets in a secure and user-friendly manner.
 
 # What does this repo contain?
 
